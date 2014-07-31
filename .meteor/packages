@@ -6,3 +6,10 @@
 standard-app-packages
 autopublish
 insecure
+moment
+iron-router
+bootstrap-3
+iron-router-progress
+accounts-ui-bootstrap-3
+accounts-password
+accounts-ui
