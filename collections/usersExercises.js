@@ -1,0 +1,1 @@
+UsersExercises = new Meteor.Collection('usersExercises');

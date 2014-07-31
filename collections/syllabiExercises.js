@@ -1,0 +1,1 @@
+SyllabiExercises = new Meteor.Collection('syllabiExercises');

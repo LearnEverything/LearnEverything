@@ -1,0 +1,1 @@
+UsersSyllabi = new Meteor.Collection('usersSyllabi');
