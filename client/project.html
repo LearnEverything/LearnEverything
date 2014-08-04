@@ -1,0 +1,68 @@
+<template name="oneProject">
+
+
+{{#with project}}
+{{#if $.Session.get "editingProject"}}
+<h1>Editing Project</h1>
+<div class="row">
+  
+
+  	<div class="form-group">
+        <label for="title">Name</label>
+        <input type="text" class="form-control" name="projectName" placeholder="Name Me" value="{{name}}">
+  	</div>
+  	<div class="form-group">
+    	<label for="title">Total Cost</label>
+    	<input type="text" class="form-control" name="projectTotalCost" placeholder="Enter Total Cost">
+   </div>
+   <div class="form-group">
+    	<label for="title">StartDate</label>
+    	<input type="text" class="form-control" name="projectDate" placeholder="Name Me">
+    </div>
+   	<div class="form-group">
+    	<label for="title">Due Date</label>
+    	<input type="text" class="form-control" name="projectDueDate" placeholder="Enter Due Date">
+   	</div>
+
+   	<div class="pull-right">
+   		<button type="button" class="btn btn-default" data-action="saveProject">Save</button>
+   		<button type="button" class="btn btn-default" data-action="cancelEditProject">Cancel</button>
+  	</div>
+
+</div>
+
+{{else}}
+<div class="pull-right">
+      <button type="button" class="btn btn-default" data-action="removeProject">Remove Project</button>
+      <button type="button" class="btn btn-default" data-action="editProject">Edit Project</button>
+</div>
+
+
+{{/if}}
+{{/with}}
+</template>
+
+<!--
+ 		<div class="form-group">
+    		<label for="title">Name</label>
+    		<input type="text" class="form-control" name="projectName" placeholder="Name Me" value="{{name}}">
+    	</div>
+
+    	<div class="form-group">
+    		<label for="title">Total Cost</label>
+    		<input type="text" class="form-control" name="projectTotalCost" placeholder="Enter Total Cost">
+    	</div>
+    	<div class="form-group">
+    		<label for="title">StartDate</label>
+    		<input type="text" class="form-control" name="projectDate" placeholder="Name Me">
+    	</div>
+    	<div class="form-group">
+    		<label for="title">Due Date</label>
+    		<input type="text" class="form-control" name="pprojectDueDate" placeholder="Enter Due Date">
+    	</div>
+
+
+		<text>Project Notes</text>text>
+    	<textarea class="form-control" name="projectNotes" type="text" rows="3" placeholder="Enter Project Notes"></textarea>
+		<button type="button" class="btn btn-success pull-right" data-action="addProject">+Add New Project</button>
+ -->
