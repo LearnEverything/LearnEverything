@@ -1,4 +1,28 @@
 <template name="allProjects">
-<h1>Projects</h1>
- 
+	<h1>Projects</h1>
+ 	<form role="form">
+ 		<div class="form-group">
+    		<label for="title">Name</label>
+    		<input type="text" class="form-control" name="projectName" placeholder="Name Me">
+    	</div>
+
+    	<div class="form-group">
+    		<label for="title">Total Cost</label>
+    		<input type="text" class="form-control" name="projectTotalCost" placeholder="Enter Total Cost">
+    	</div>
+    	<div class="form-group">
+    		<label for="title">Due Date</label>
+    		<input type="text" class="form-control" name="pprojectDueDate" placeholder="Enter Due Date">
+    	</div>
+    	<div class="form-group">
+    		<label for="title">Date</label>
+    		<input type="text" class="form-control" name="projectDate" placeholder="Name Me">
+    	</div>
+
+		<text>Project Notes</text>text>
+    	<textarea class="form-control" name="projectNotes" type="text" rows="3" placeholder="Enter Project Notes"></textarea>
+		<button type="button" class="btn btn-success pull-right" data-action="addProject">+Add New Project</button>
+	</form>
+
+
 </template>
