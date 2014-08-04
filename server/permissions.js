@@ -11,6 +11,8 @@ var generalPermissions = {
   }
 };
 
+
+
 Exercises.allow(generalPermissions);
 Projects.allow(generalPermissions);
 Syllabi.allow(generalPermissions);
