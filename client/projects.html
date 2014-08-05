@@ -1,9 +1,14 @@
 <template name="allProjects">
-	<h1>Projects</h1>
- 	
-	<button type="button" class="btn btn-success pull-right" data-action="addProject">+Add New Project</button>
-        
+<h1>Projects</h1>
+ 
+<button type="button" class="btn btn-success pull-right" data-action="addProject">+Add New Project</button>
 
-
+<div class="row">        
+	{{#each projects}}
+		<div class="col-md-3">
+		 	<a href="{{pathFor 'oneProject'}}" >{{name}}</a>
+		</div>
+	{{/each}}
+</div>
 
 </template>

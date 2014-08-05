@@ -1,15 +1,18 @@
 
 	Template.oneProject.events({
 	"click [data-action='saveProject']" : function(e, t){
-    	var projectId = Projects.update({
-        name:$("[name='projectName']").val(),
-     	totalCost:$("[name='projectTotalCost']").val(),
-     	dueDate:$("[name='projectDueDate']").val(),
-     	startDate:$("[name='projectDate']").val(),
-     	notes:$("[name='projectNotes']").val(),
-  			});
+      e.preventDefault();
+      var projectObj = {
+            name:$("[name='projectNameSave']").val(),
+            totalCost:$("[name='projectTotalCostSave']").val(),
+            dueDate:$("[name='projectDueDateSave']").val(),
+            startDate:$("[name='projectDateSave']").val(),
+            notes:$("[name='projectNotesSave']").val(),
+        };
+    	Projects.update({_id: Router.current().params._id},
+        {$set: projectObj }); 
   	Session.set('editingProject', false); //two lines to open new window
-    Router.go('allProjects', {_id: projectId});	 
+    Router.go('allProjects');	 
 		}	
 	});
 

@@ -6,23 +6,24 @@
 <h1>Editing Project</h1>
 <div class="row">
   
-
   	<div class="form-group">
         <label for="title">Name</label>
-        <input type="text" class="form-control" name="projectName" placeholder="Name Me" value="{{name}}">
+        <input type="text" class="form-control" name="projectNameSave" placeholder="Name Me" value="{{name}}">
   	</div>
   	<div class="form-group">
     	<label for="title">Total Cost</label>
-    	<input type="text" class="form-control" name="projectTotalCost" placeholder="Enter Total Cost">
+    	<input type="text" class="form-control" name="projectTotalCostSave" placeholder="Enter Total Cost" value="{{totalCost}}">
    </div>
    <div class="form-group">
     	<label for="title">StartDate</label>
-    	<input type="text" class="form-control" name="projectDate" placeholder="Name Me">
+    	<input type="text" class="form-control" name="projectDateSave" placeholder="Start Date" value = "{{startDate}}">
     </div>
    	<div class="form-group">
     	<label for="title">Due Date</label>
-    	<input type="text" class="form-control" name="projectDueDate" placeholder="Enter Due Date">
+    	<input type="text" class="form-control" name="projectDueDateSave" placeholder="Enter Due Date" value="{{dueDate}}">
    	</div>
+    <text>Project Notes</text>
+      <textarea class="form-control" name="projectNotesSave" type="text" rows="3" placeholder="Enter Project Notes" value="{{projectNotes}}"></textarea>
 
    	<div class="pull-right">
    		<button type="button" class="btn btn-default" data-action="saveProject">Save</button>
