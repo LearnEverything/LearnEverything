@@ -1,3 +1,42 @@
 <template name="oneExercise">
-<h1>Exercise</h1>
+{{#with exercise}}
+{{#if $.Session.get "editingExercise"}}
+<h1>Editing Exercise</h1>
+<div class="row">
+  
+  	<div class="form-group">
+        <label for="title">Name</label>
+        <input type="text" class="form-control" name="exerciseNameSave" placeholder="Name Me" value="{{exerciseName}}">
+  	</div>
+  	<div class="form-group">
+    	<label for="title">Total Cost</label>
+    	<input type="text" class="form-control" name="exerciseTotalCostSave" placeholder="Enter Total Cost" value="{{exerciseTotalCost}}">
+   </div>
+   <div class="form-group">
+    	<label for="title">StartDate</label>
+    	<input type="text" class="form-control" name="exerciseDateSave" placeholder="Start Date" value = "{{exerciseStartDate}}">
+    </div>
+   	<div class="form-group">
+    	<label for="title">Due Date</label>
+    	<input type="text" class="form-control" name="exerciseDueDateSave" placeholder="Enter Due Date" value="{{exerciseDueDate}}">
+   	</div>
+    <text>Project Notes</text>
+      <textarea class="form-control" name="exerciseNotesSave" type="text" rows="3" placeholder="Enter Project Notes" value="{{exerciseNotes}}"></textarea>
+
+   	<div class="pull-right">
+   		<button type="button" class="btn btn-default" data-action="saveExercise">Save</button>
+   		<button type="button" class="btn btn-default" data-action="cancelEditExercise">Cancel</button>
+  	</div>
+
+</div>
+
+{{else}}
+<div class="pull-right">
+      <button type="button" class="btn btn-default" data-action="removeExercise">Remove Exercise</button>
+      <button type="button" class="btn btn-default" data-action="editExercise">Edit Exercise</button>
+</div>
+
+
+{{/if}}
+{{/with}}
 </template>

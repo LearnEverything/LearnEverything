@@ -1,4 +1,15 @@
 <template name="allExercises">
 <h1>Exercises</h1>
  
+<button type="button" class="btn btn-success pull-right" data-action="addExercise">+Add New Exercise</button>
+
+<div class="row">        
+	{{#each exercises}}
+		<div class="col-md-3">
+		 	<a href="{{pathFor 'oneExercise'}}" >{{name}}</a>
+		</div>
+	{{/each}}
+</div>
+
+ 
 </template>
